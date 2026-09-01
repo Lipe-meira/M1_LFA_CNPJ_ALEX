@@ -223,8 +223,9 @@ def main():
     """Monta o AFD, baixa 3 paginas e lista os CNPJs de cada uma."""
     urls = []
     urls.append("https://www.samsung.com/br/")
-    urls.append("https://primeirasolucao.com.br/artigo/como-validar-cnpj-alfanumerico-em-javascript")
+    urls.append("https://g1.globo.com/empreendedorismo/noticia/2026/08/01/receita-federal-emite-o-primeiro-cnpj-alfanumerico-do-brasil-entenda-o-que-muda.ghtml")
     urls.append("https://batedor.com.br/blog/cnpj-alfanumerico-novo-formato")
+    urls.append("https://www.kabum.com.br/sobre")
 
     pastaPython = os.path.dirname(os.path.abspath(__file__))
     pastaRaiz = os.path.join(pastaPython, "..")
