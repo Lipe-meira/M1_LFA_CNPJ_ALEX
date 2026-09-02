@@ -221,15 +221,15 @@ def exibirResultados(numeroPagina, url, encontrados):
 
 def main():
     """Monta o AFD, baixa 3 paginas e lista os CNPJs de cada uma."""
-    urls = []
+    pastaPython = os.path.dirname(os.path.abspath(__file__))
+    pastaProjeto = os.path.dirname(pastaPython)
+    urlLocal = os.path.join(pastaProjeto, "paginas", "cnpj-alfanumerico.html")
+
+    urls = [urlLocal]
     urls.append("https://www.samsung.com/br/")
     urls.append("https://g1.globo.com/empreendedorismo/noticia/2026/08/01/receita-federal-emite-o-primeiro-cnpj-alfanumerico-do-brasil-entenda-o-que-muda.ghtml")
     urls.append("https://batedor.com.br/blog/cnpj-alfanumerico-novo-formato")
     urls.append("https://www.kabum.com.br/sobre")
-
-    pastaPython = os.path.dirname(os.path.abspath(__file__))
-    pastaRaiz = os.path.join(pastaPython, "..")
-    urlLocal = os.path.join(pastaRaiz, "paginas", "cnpj-alfanumerico.html")
 
     alfabeto = criarAlfabeto()
     estados = criarEstados()
